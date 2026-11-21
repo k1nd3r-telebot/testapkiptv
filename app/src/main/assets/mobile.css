@@ -1,0 +1,20 @@
+/* Phone layout: player on top, categories as a horizontal strip, channel list below. */
+@media (max-width:800px){
+  html,body{font-size:15px}
+  .vb{flex-direction:column}
+  #right{order:0;flex:none;max-height:56vh;overflow-y:auto}
+  #pwrap{max-height:none}
+  #info{flex:none;padding:10px 14px 0}
+  #catcol{order:1;width:100%;flex:none;flex-direction:row;border-right:0;border-bottom:1px solid var(--ln)}
+  #cats{display:flex;overflow-x:auto;overflow-y:hidden;flex:1;min-width:0}
+  .cat{flex:none;white-space:nowrap;padding:10px 12px}
+  #catfoot{border-top:0;border-left:1px solid var(--ln);padding:4px 6px;display:flex;align-items:center}
+  #chs{order:2;width:100%;flex:1;min-height:0;border-right:0}
+  .ch{padding:10px}
+  .ch img{width:48px;height:36px}
+  #chs input{font-size:16px}
+  #setbox{padding:14px}
+  .box{width:94vw}
+  #mini{gap:6px;padding:0 8px}
+  #mini #mi-vol,#mini #mi-stop{display:none}
+}

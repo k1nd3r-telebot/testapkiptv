@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><title>IPTV Player</title><link rel="stylesheet" href="app.css"><link rel="stylesheet" href="mobile.css"></head>
+<body>
+<div id="app">
+  <main>
+    <section id="v-tv" class="view on">
+      <div id="tvtabs" class="ptabs hide"></div>
+      <div class="vb">
+        <div id="catcol" class="col cc"><div id="cats"></div><div id="catfoot"><button id="gear" data-it="set">⚙</button></div></div>
+        <div id="chs" class="col"><input id="chq" data-ip="chq"><div id="chlist"></div></div>
+        <div id="right">
+          <div id="pwrap" class="pw ch-live"><video id="vid" autoplay playsinline></video><div id="msg"></div></div>
+          <div id="info"></div>
+        </div>
+      </div>
+    </section>
+    <section id="v-set" class="view">
+      <div id="setbox">
+        <button id="sback" data-i="back" style="margin-bottom:14px"></button>
+        <h2 data-i="pls"></h2><div id="pls"></div>
+        <div class="row"><button id="addpl" class="pri" data-i="addpl"></button><button id="refresh" data-i="refresh"></button></div>
+      </div>
+    </section>
+  </main>
+</div>
+<div id="mini" class="hide"><img id="mi-logo" alt=""><div class="mt"><div id="mi-name" class="nm"></div><div id="mi-sub" class="np"></div></div><button id="mi-prev" data-it="prev"></button><button id="mi-pp" data-it="playpause"></button><button id="mi-next" data-it="next"></button><button id="mi-stop" data-it="stop"></button><button id="mi-mu" data-it="sound"></button><input type="range" id="mi-vol" min="0" max="1" step="0.02"></div>
+<div id="modal" class="hide"><div class="box">
+  <h3 id="m-title" data-i="addTitle"></h3>
+  <label data-i="name"></label><input id="f-name" data-ip="namePh">
+  <label data-i="m3u"></label><input id="f-url" placeholder="http://…/tv.m3u">
+  <div class="row"><button id="m-ok" class="pri" data-i="ok"></button><button id="m-cancel" data-i="cancel"></button></div>
+</div></div>
+<div id="toast" class="hide"></div>
+<script src="chrome-shim.js"></script><script src="hls.min.js"></script>
+<script src="app.js"></script>
+</body></html>
