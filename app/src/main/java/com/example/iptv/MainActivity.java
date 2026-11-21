@@ -66,7 +66,7 @@ public class MainActivity extends Activity {
         root.addView(view, new FrameLayout.LayoutParams(
                 FrameLayout.LayoutParams.MATCH_PARENT, FrameLayout.LayoutParams.MATCH_PARENT));
         web.setVisibility(View.GONE);
-        setImmersive(true);
+        setFullscreenUi(true);
     }
 
     private void hideCustom() {
@@ -76,10 +76,10 @@ public class MainActivity extends Activity {
         if (customCb != null) customCb.onCustomViewHidden();
         customCb = null;
         web.setVisibility(View.VISIBLE);
-        setImmersive(false);
+        setFullscreenUi(false);
     }
 
-    private void setImmersive(boolean on) {
+    private void setFullscreenUi(boolean on) {
         View d = getWindow().getDecorView();
         if (on) {
             d.setSystemUiVisibility(View.SYSTEM_UI_FLAG_FULLSCREEN
