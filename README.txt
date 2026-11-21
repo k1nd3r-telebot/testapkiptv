@@ -21,3 +21,9 @@ Note:
 - Daca vrei sa modifici interfata, editezi fisierele din app/src/main/assets/
   (app.js, app.css, mobile.css - acesta contine stilurile pentru telefon).
 - Pentru telefon, ecranul de jos (bara de redare) si lista de canale sunt aranjate vertical.
+
+BUILD PRIN GITHUB:
+- Pune tot continutul folderului iptv-android in radacina repository-ului (settings.gradle trebuie sa fie vizibil direct, nu intr-un subfolder).
+- Fisierul .github/workflows/build.yml face build-ul automat la fiecare push.
+- Dupa build: tab-ul Actions > ultimul run > Artifacts > IPTV-Player-debug (contine app-debug.apk).
+- Daca ai deja un workflow vechi cu "chmod +x gradlew", inlocuieste-l cu acesta.
